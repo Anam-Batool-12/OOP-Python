@@ -2,24 +2,18 @@
 class Payment:
     def pay(self, amount):
         print(f"Payment mode: ${amount}")
-
-# Cash Payment Class
 class Cash(Payment):
     def __init__(self, cash):
         self.cash = cash
 
     def pay(self, amount):
         print(f"Cash payment of ${amount}")
-
-# Card Payment Class
 class Card(Payment):
     def __init__(self, card):
         self.card = card
 
     def pay(self, amount):
         print(f"Card payment of ${amount} using card ending in {self.card}.")
-
-# Cheque Payment Class
 class Cheque(Payment):
     def __init__(self, cheque):
         self.cheque = cheque
@@ -27,11 +21,10 @@ class Cheque(Payment):
     def pay(self, amount):
         print(f"Cheque payment of ${amount} with cheque number {self.cheque}.")
 
-# Example Usage
 if __name__ == "__main__":
     payment_methods = {
         "1": Cash("Cash"),
-        "2": Card("1234567890123456"),  # Example card number
+        "2": Card("12345678901"),
         "3": Cheque("987654")
     }
 
